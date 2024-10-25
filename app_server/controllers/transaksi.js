@@ -24,8 +24,8 @@ const index = (req, res, next) => {
 
 const insert = (req, res, next) => {
   const tri = new Transaksi({
-    produk_id: req.body.produk_id,
-    pengguna_id: req.body.pengguna_id,
+    produk_id: new mongoose.Types.ObjectId(),
+    pengguna_id: new mongoose.Types.ObjectId(),
     jumlah: req.body.jumlah,
     total_harga: req.body.total_harga,
     tanggal_transaksi: req.body.tanggal_transaksi, 
