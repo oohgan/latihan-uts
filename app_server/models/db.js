@@ -1,7 +1,7 @@
-// require('./');
+require('./transaksi');
 
 const mongoose = require("mongoose");
-const dbURL = "localhost:27017/pawii.latihan-uts";
+const dbURI = "mongodb://localhost:27017/latihan_uts";
 
 mongoose.connect(dbURI, {
   // useNewUrlParser: true

@@ -1,12 +1,12 @@
-const mongoose = require("mongoose");
-const {Schema} = mongoose;
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
 const transaksiShema = new Schema({
-    produk_id: ObjectId,
-    pengguna_id: ObjectId,
-    jumlah: Number,
-    total_harga: Number,
-    tanggal_transaksi: Date 
+  produk_id: { type: Schema.Types.ObjectId },
+  pengguna_id: { type: Schema.Types.ObjectId },
+  jumlah: Number,
+  total_harga: Number,
+  tanggal_transaksi: Date,
 });
 
-module.exports("Transaksi", transaksiShema);
+mongoose.model('Transaksi', transaksiShema);
